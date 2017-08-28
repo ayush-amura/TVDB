@@ -1,0 +1,2 @@
+class Tvshow < Video
+end
