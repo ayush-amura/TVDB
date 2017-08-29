@@ -1,0 +1,841 @@
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (75.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (75.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20170829095722)
+  [1m[35m (83.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `age` int NOT NULL, `contact_no` int NOT NULL, `type` varchar(255) NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (149.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (149.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829095722')[0m
+  [1m[35m (49.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-08-29 10:01:34', '2017-08-29 10:01:34')[0m
+  [1m[35m (48.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (87.5ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `admin_id` bigint, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL,  INDEX `index_videos_on_admin_id`  (`admin_id`), CONSTRAINT `fk_rails_8b936a8343`
+FOREIGN KEY (`admin_id`)
+  REFERENCES `admins` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (94.0ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `admin_id` bigint, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL,  INDEX `index_videos_on_admin_id`  (`admin_id`), CONSTRAINT `fk_rails_8b936a8343`
+FOREIGN KEY (`admin_id`)
+  REFERENCES `admins` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (86.4ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `admin_id` bigint, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL,  INDEX `index_videos_on_admin_id`  (`admin_id`), CONSTRAINT `fk_rails_8b936a8343`
+FOREIGN KEY (`admin_id`)
+  REFERENCES `admins` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20170829095722)
+  [1m[35m (141.5ms)[0m  [1m[35mDROP INDEX `index_users_on_reset_password_token` ON `users`[0m
+  [1m[35m (116.4ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  [1m[35m (51.1ms)[0m  [1m[35mDROP TABLE `users`[0m
+  [1m[35mSQL (49.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829095722'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20170829095722)
+  [1m[35m (69.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `age` int NOT NULL, `contact_no` int NOT NULL, `type` varchar(255) NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (132.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (149.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829095722')[0m
+  [1m[35m (38.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (70.9ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `admin_id` bigint, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL,  INDEX `index_videos_on_admin_id`  (`admin_id`), CONSTRAINT `fk_rails_8b936a8343`
+FOREIGN KEY (`admin_id`)
+  REFERENCES `admins` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (83.3ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829101047')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (44.0ms)[0m  [1m[35mDROP TABLE `videos`[0m
+  [1m[35mSQL (41.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829101047'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (93.1ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL, `user_id` bigint,  INDEX `index_videos_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_ba925d1105`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829101047')[0m
+  [1m[35m (45.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (106.6ms)[0m  [1m[35mCREATE TABLE `actors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `age` int NOT NULL, `rating` int NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103239')[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (126.2ms)[0m  [1m[35mCREATE TABLE `users_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `video_id` bigint,  INDEX `index_users_videos_on_user_id`  (`user_id`),  INDEX `index_users_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_6d6bcca0b2`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_77bb835370`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103821')[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (123.6ms)[0m  [1m[35mCREATE TABLE `actors_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `video_id` bigint,  INDEX `index_actors_videos_on_actor_id`  (`actor_id`),  INDEX `index_actors_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_f77d2a3155`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_c5a006d2f6`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103830')[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (185.3ms)[0m  [1m[35mCREATE TABLE `actors_users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `user_id` bigint,  INDEX `index_actors_users_on_actor_id`  (`actor_id`),  INDEX `index_actors_users_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_034cfb0256`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_3ac5fff687`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103838')[0m
+  [1m[35m (47.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ayush@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'a@a.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `age`, `contact_no`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('admin1', 22, 1231231231, 'User::Admin', 'a@a.com', '$2a$11$qvEHXaMwBtqoxJPDbZKVseL3.w5qfhmMI710HY/483kt2HCfb..3u', '2017-08-29 11:22:44', '2017-08-29 11:22:44')[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser::Admin Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `users_videos` ON `videos`.`id` = `users_videos`.`video_id` WHERE `users_videos`.`user_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') LIMIT 11[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `users_videos` ON `videos`.`id` = `users_videos`.`video_id` WHERE `users_videos`.`user_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `users_videos` ON `videos`.`id` = `users_videos`.`video_id` WHERE `users_videos`.`user_id` = 1 AND (type = 'Tvshow' ) LIMIT 11[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `actors` (`name`, `age`, `rating`) VALUES ('salman', 501231, 0)[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.9ms)[0m  [1m[33mUPDATE `actors` SET `age` = 501212 WHERE `actors`.`id` = 1[0m
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` LIMIT 11[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 11[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `users_videos` ON `videos`.`id` = `users_videos`.`video_id` WHERE `users_videos`.`user_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mUser::Admin Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser::Admin Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `users_videos` ON `videos`.`id` = `users_videos`.`video_id` WHERE `users_videos`.`user_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Viewer Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asdas@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asdas@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('ayush', 'User::Viewer', 'asdas@gmail.com', '$2a$11$gbIbrz7fDFW4B7oEVyN/a.2gt5LDKrVZntf0fd1vXgirD/n8Q/EwW', '2017-08-29 11:47:20', '2017-08-29 11:47:20')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asdas@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('ayush', 'User::Viewer', 'asdas@gmail.com', '$2a$11$QscCUcRS2f8JnkHR0vMSGutoJxp3V0zGgiiQkLnQPbBszGjVoAzz2', '2017-08-29 11:48:08', '2017-08-29 11:48:08')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asdas@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('ayush', 'User::Viewer', 'asdas@gmail.com', '$2a$11$JHCKnrqP/OKO9Rt6rWGtlek1p969pFs0NIo3wMW4ezuPTQoBoF4FC', '2017-08-29 11:48:37', '2017-08-29 11:48:37')[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asdas@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `age`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('ayush', 12, 'User::Viewer', 'asdas@gmail.com', '$2a$11$DhacbNu2Xy7x0O8tLkbssOgs5paiHeNJl2tjRO2G.kISxQM1WG0ly', '2017-08-29 11:49:21', '2017-08-29 11:49:21')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asdas@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `age`, `contact_no`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('ayush', 12, 1231231231, 'User::Viewer', 'asdas@gmail.com', '$2a$11$u0aO70k3RK.UoMLrqggWeuTRbFXIhPR7ZgcHoKKLIsf.kYzYpy07y', '2017-08-29 11:50:08', '2017-08-29 11:50:08')[0m
+  [1m[35m (44.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser::Viewer Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') LIMIT 11[0m
+  [1m[36mUser::Viewer Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `users_videos` ON `videos`.`id` = `users_videos`.`video_id` WHERE `users_videos`.`user_id` = 2 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mUser::Viewer Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (53.2ms)[0m  [1m[35mDROP TABLE `actors_users`[0m
+  [1m[35mSQL (48.1ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103838'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (52.6ms)[0m  [1m[35mDROP TABLE `actors_videos`[0m
+  [1m[35mSQL (49.4ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103830'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (47.8ms)[0m  [1m[35mDROP TABLE `users_videos`[0m
+  [1m[35mSQL (40.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103821'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (44.0ms)[0m  [1m[35mDROP TABLE `actors`[0m
+  [1m[35mSQL (41.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103239'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (44.9ms)[0m  [1m[35mDROP TABLE `videos`[0m
+  [1m[35mSQL (41.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829101047'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (83.7ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL, `user_id` bigint,  INDEX `index_videos_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_ba925d1105`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829101047')[0m
+  [1m[35m (46.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (66.1ms)[0m  [1m[35mCREATE TABLE `actors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `age` int NOT NULL, `rating` int NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103239')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (106.7ms)[0m  [1m[35mCREATE TABLE `users_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `video_id` bigint,  INDEX `index_users_videos_on_user_id`  (`user_id`),  INDEX `index_users_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_6d6bcca0b2`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_77bb835370`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103821')[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (106.7ms)[0m  [1m[35mCREATE TABLE `actors_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `video_id` bigint,  INDEX `index_actors_videos_on_actor_id`  (`actor_id`),  INDEX `index_actors_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_f77d2a3155`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_c5a006d2f6`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103830')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (106.6ms)[0m  [1m[35mCREATE TABLE `actors_users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `user_id` bigint,  INDEX `index_actors_users_on_actor_id`  (`actor_id`),  INDEX `index_actors_users_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_034cfb0256`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_3ac5fff687`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103838')[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (33.4ms)[0m  [1m[35mDROP TABLE `actors_users`[0m
+  [1m[35mSQL (41.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103838'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (43.7ms)[0m  [1m[35mDROP TABLE `actors_videos`[0m
+  [1m[35mSQL (40.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103830'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (38.9ms)[0m  [1m[35mDROP TABLE `users_videos`[0m
+  [1m[35mSQL (41.1ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103821'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (40.6ms)[0m  [1m[35mDROP TABLE `actors`[0m
+  [1m[35mSQL (49.1ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103239'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (60.8ms)[0m  [1m[35mDROP TABLE `videos`[0m
+  [1m[35mSQL (41.1ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829101047'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (73.6ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829101047')[0m
+  [1m[35m (37.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (66.0ms)[0m  [1m[35mCREATE TABLE `actors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `age` int NOT NULL, `rating` int NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103239')[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (123.4ms)[0m  [1m[35mCREATE TABLE `users_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `video_id` bigint,  INDEX `index_users_videos_on_user_id`  (`user_id`),  INDEX `index_users_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_6d6bcca0b2`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_77bb835370`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103821')[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (173.5ms)[0m  [1m[35mCREATE TABLE `actors_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `video_id` bigint,  INDEX `index_actors_videos_on_actor_id`  (`actor_id`),  INDEX `index_actors_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_f77d2a3155`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_c5a006d2f6`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103830')[0m
+  [1m[35m (38.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (115.1ms)[0m  [1m[35mCREATE TABLE `actors_users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `user_id` bigint,  INDEX `index_actors_users_on_actor_id`  (`actor_id`),  INDEX `index_actors_users_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_034cfb0256`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_3ac5fff687`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103838')[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `videos` (`title`, `language`, `genre`, `year_release`, `rating`, `type`) VALUES ('titanic', 'english', 'action', 2000, 5, 'Video::Movie')[0m
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `actors` (`name`, `age`, `rating`) VALUES ('salman', 50, 5)[0m
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.7ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `actors_videos` (`actor_id`, `video_id`) VALUES (1, 1)[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mVideo::Movie Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `actors_videos` (`actor_id`, `video_id`) VALUES (1, 1)[0m
+  [1m[35m (50.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` LIMIT 11[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asdasd@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `age`, `contact_no`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('ayush', 12, 1231231231, 'User::Viewer', 'asdasd@gmail.com', '$2a$11$p7STn9QLGU18JQMlKKIToOHiKvbuBDMKuJ1k3YglHX54yAazgNyGu', '2017-08-29 11:59:17', '2017-08-29 11:59:17')[0m
+  [1m[35m (37.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser::Viewer Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') LIMIT 11[0m
+  [1m[36mUser::Viewer Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer')[0m
+  [1m[36mUser::Viewer Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT `actors`.* FROM `actors` INNER JOIN `actors_users` ON `actors`.`id` = `actors_users`.`actor_id` WHERE `actors_users`.`user_id` = 2[0m
+  [1m[36mUser::Viewer Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Viewer Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `actors_users` (`actor_id`, `user_id`) VALUES (1, 2)[0m
+  [1m[35m (38.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT `actors`.* FROM `actors` INNER JOIN `actors_users` ON `actors`.`id` = `actors_users`.`actor_id` WHERE `actors_users`.`user_id` = 2[0m
+  [1m[36mUser::Viewer Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Viewer') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT `actors`.* FROM `actors` INNER JOIN `actors_users` ON `actors`.`id` = `actors_users`.`actor_id` WHERE `actors_users`.`user_id` = 2[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` INNER JOIN `actors_videos` ON `actors`.`id` = `actors_videos`.`actor_id` WHERE `actors_videos`.`video_id` = 1 LIMIT 11[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `actors_videos` (`actor_id`, `video_id`) VALUES (1, 1)[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mVideo::Movie Load (0.5ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (101.8ms)[0m  [1m[35mDROP TABLE `actors_users`[0m
+  [1m[35mSQL (40.2ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103838'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (52.8ms)[0m  [1m[35mDROP TABLE `actors_videos`[0m
+  [1m[35mSQL (39.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103830'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (44.5ms)[0m  [1m[35mDROP TABLE `users_videos`[0m
+  [1m[35mSQL (39.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103821'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (57.5ms)[0m  [1m[35mDROP TABLE `actors`[0m
+  [1m[35mSQL (49.4ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103239'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (66.2ms)[0m  [1m[35mDROP TABLE `videos`[0m
+  [1m[35mSQL (49.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829101047'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (131.2ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL, `user_id` bigint,  INDEX `index_videos_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_ba925d1105`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829101047')[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (66.1ms)[0m  [1m[35mCREATE TABLE `actors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `age` int NOT NULL, `rating` int NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103239')[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (106.9ms)[0m  [1m[35mCREATE TABLE `users_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `video_id` bigint,  INDEX `index_users_videos_on_user_id`  (`user_id`),  INDEX `index_users_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_6d6bcca0b2`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_77bb835370`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103821')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (114.8ms)[0m  [1m[35mCREATE TABLE `actors_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `video_id` bigint,  INDEX `index_actors_videos_on_actor_id`  (`actor_id`),  INDEX `index_actors_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_f77d2a3155`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_c5a006d2f6`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103830')[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (274.1ms)[0m  [1m[35mCREATE TABLE `actors_users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `user_id` bigint,  INDEX `index_actors_users_on_actor_id`  (`actor_id`),  INDEX `index_actors_users_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_034cfb0256`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_3ac5fff687`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103838')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'asd@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `age`, `contact_no`, `type`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('ankush', 12, 1231231231, 'User::Admin', 'asd@gmail.com', '$2a$11$..i29b6ltZv2pRdFhuhLgeek/WbY2mCKhOrnxg2ayF5qW88Vu25oC', '2017-08-29 12:20:24', '2017-08-29 12:20:24')[0m
+  [1m[35m (37.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.5ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `videos` (`title`, `type`) VALUES ('ayusdhaushduahsd', 'Video::Movie')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.6ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') LIMIT 11[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.2ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser::Admin Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`type` IN ('User::Admin') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `videos` (`type`) VALUES ('Video::Movie')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `videos` (`type`) VALUES ('Video::Movie')[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO `videos` (`type`) VALUES ('Video::Movie')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (99.8ms)[0m  [1m[35mDROP TABLE `actors_users`[0m
+  [1m[35mSQL (40.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103838'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (40.4ms)[0m  [1m[35mDROP TABLE `actors_videos`[0m
+  [1m[35mSQL (41.1ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103830'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (43.1ms)[0m  [1m[35mDROP TABLE `users_videos`[0m
+  [1m[35mSQL (49.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103821'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (77.8ms)[0m  [1m[35mDROP TABLE `actors`[0m
+  [1m[35mSQL (40.2ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829103239'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (34.5ms)[0m  [1m[35mDROP TABLE `videos`[0m
+  [1m[35mSQL (41.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170829101047'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(7274983841945138130, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateVideos (20170829101047)
+  [1m[35m (76.0ms)[0m  [1m[35mCREATE TABLE `videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) NOT NULL, `language` varchar(255) NOT NULL, `genre` varchar(255) NOT NULL, `year_release` int NOT NULL, `rating` int NOT NULL, `type` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829101047')[0m
+  [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActors (20170829103239)
+  [1m[35m (66.1ms)[0m  [1m[35mCREATE TABLE `actors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `age` int NOT NULL, `rating` int NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103239')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsersVideos (20170829103821)
+  [1m[35m (131.8ms)[0m  [1m[35mCREATE TABLE `users_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `video_id` bigint,  INDEX `index_users_videos_on_user_id`  (`user_id`),  INDEX `index_users_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_6d6bcca0b2`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_77bb835370`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103821')[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsVideos (20170829103830)
+  [1m[35m (131.8ms)[0m  [1m[35mCREATE TABLE `actors_videos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `video_id` bigint,  INDEX `index_actors_videos_on_actor_id`  (`actor_id`),  INDEX `index_actors_videos_on_video_id`  (`video_id`), CONSTRAINT `fk_rails_f77d2a3155`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_c5a006d2f6`
+FOREIGN KEY (`video_id`)
+  REFERENCES `videos` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103830')[0m
+  [1m[35m (48.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActorsUsers (20170829103838)
+  [1m[35m (132.8ms)[0m  [1m[35mCREATE TABLE `actors_users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `actor_id` bigint, `user_id` bigint,  INDEX `index_actors_users_on_actor_id`  (`actor_id`),  INDEX `index_actors_users_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_034cfb0256`
+FOREIGN KEY (`actor_id`)
+  REFERENCES `actors` (`id`)
+, CONSTRAINT `fk_rails_3ac5fff687`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170829103838')[0m
+  [1m[35m (48.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK(7274983841945138130)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `videos` (`title`, `language`, `genre`, `year_release`, `rating`, `type`) VALUES ('lala', 'easd', 'asdasdas', 123, 2, 'Video::Movie')[0m
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo::Movie Load (0.6ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` INNER JOIN `actors_videos` ON `actors`.`id` = `actors_videos`.`actor_id` WHERE `actors_videos`.`video_id` = 1 LIMIT 11[0m
+  [1m[36mVideo::Movie Load (0.1ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` INNER JOIN `actors_videos` ON `actors`.`id` = `actors_videos`.`actor_id` WHERE `actors_videos`.`video_id` = 1 LIMIT 11[0m
+  [1m[36mVideo::Movie Load (0.2ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` INNER JOIN `actors_videos` ON `actors`.`id` = `actors_videos`.`actor_id` WHERE `actors_videos`.`video_id` = 1 LIMIT 11[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` LIMIT 11[0m
+  [1m[36mActor Load (0.9ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `actors` (`name`, `age`, `rating`) VALUES ('asdasd', 21, 123)[0m
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `actors_videos` (`actor_id`, `video_id`) VALUES (1, 1)[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` INNER JOIN `actors_videos` ON `actors`.`id` = `actors_videos`.`actor_id` WHERE `actors_videos`.`video_id` = 1 LIMIT 11[0m
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.5ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `actors_videos` (`actor_id`, `video_id`) VALUES (1, 1)[0m
+  [1m[35m (37.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mVideo::Movie Load (0.6ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') LIMIT 11[0m
+  [1m[36mVideo::Movie Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` ASC LIMIT 1[0m
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `actors_videos` (`actor_id`, `video_id`) VALUES (1, 1)[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` LIMIT 11[0m
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` ORDER BY `actors`.`id` ASC LIMIT 1[0m
+  [1m[36mVideo::Movie Load (0.3ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` WHERE `videos`.`type` IN ('Video::Movie') ORDER BY `videos`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `actors_videos` (`actor_id`, `video_id`) VALUES (1, 1)[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  `videos`.* FROM `videos` INNER JOIN `actors_videos` ON `videos`.`id` = `actors_videos`.`video_id` WHERE `actors_videos`.`actor_id` = 1 AND (type = 'Movie' ) LIMIT 11[0m
