@@ -20,8 +20,8 @@ class Actor < ApplicationRecord
 
 	
 	#validations
-	# validates :name, presence: true 
- #  validates :age, presence: true,length: { minimum:1 ,maximum:99 }
- #  validates :rating, presence: true
+	validates :name, presence: true  
+  validates :age, presence: true
+  validates :rating, presence: true
 
 end

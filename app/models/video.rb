@@ -18,11 +18,11 @@ class Video < ApplicationRecord
 
    
 	#validations of Video fields
-	# validates :title, presence: true
- #  validates :language, presence: true
- #  validates :genre, presence: true
- #  validates :year_release, presence: true
- #  validates :rating, presence: true
- #  validates :type, presence: true
+	validates :title, presence: true
+  validates :language, presence: true
+  validates :genre, presence: true
+  validates :year_release, presence: true
+  validates :rating, presence: true
+  validates :type, presence: true
    
 end
