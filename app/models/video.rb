@@ -5,7 +5,7 @@ class Video < ApplicationRecord
 
   
   # belongs_to :admin,->(object){
-  #                           where('type = ? ', 'Admin')
+  #                           where('type = ? ', 'User::Admin')
   #                         },
   #                         class_name: 'User' 
 

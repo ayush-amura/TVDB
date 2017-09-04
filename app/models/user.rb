@@ -12,12 +12,12 @@ class User < ApplicationRecord
 
 
   has_and_belongs_to_many :tvshows,->(object){
-                            where('type = ? ', 'Tvshow')
+                            where('type = ? ', 'Video::Tvshow')
                           },
                           class_name: 'Video'
   
 	has_and_belongs_to_many :movies,->(object){
-                            where('type = ? ', 'Movie')
+                            where('type = ? ', 'Video::Movie')
                           },
                           class_name: 'Video'
 	

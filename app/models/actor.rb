@@ -3,18 +3,18 @@ class Actor < ApplicationRecord
 	#associations
 	#checking type condition for Movies
 	has_and_belongs_to_many :movies,->(object){
-														where('type = ? ', 'Movie')
+														where('type = ?', 'Video::Movie')
 													},
 													class_name: 'Video'
 
 	#Checking type condition for Tvshow
 	has_and_belongs_to_many :tvshows,->(object){
-														where('type = ? ', 'Tvshow')
+														where('type = ?', 'Video::TvShow')
 													},
 												  class_name: 'Video'
 	#Checking Viewer from User
 	has_and_belongs_to_many :viewers,->(object){
-														where('type = ? ', 'Viewer')
+														where('type = ? ', 'User::Viewer')
 													},
 												  class_name: 'User' 
 
