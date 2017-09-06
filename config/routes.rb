@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   
-  resources :videos
-  resources :actors
+  resources :videos, :actors
+  devise_for :users
   
   get 'welcome/index'
   get 'welcome/movie_index'
   get 'welcome/tvshow_index'
-  
+  get 'videos/select'
   
   # match ':controller/:action/:id', via: [:get, :post]
-  devise_for :users
+  
 
   devise_scope :user do
   get 'login', to: 'devise/sessions#new'

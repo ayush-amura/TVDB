@@ -5,15 +5,27 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+   if params[:id].nil?
+      @video = Video.all
+    else
+      @video = Video.where(id: params[:id])
+    end
    end
   
   # GET /videos/1
   # GET /videos/1.json
   def show
+    # @video1 = Video::Movie.last.actors
+
+  #@videos = Video::Movie.last.actors
+   
   end
 
-  
+  def select
+   @video.actors
+
+  end
+
   # GET /videos/new
   def new
     @video = Video.new

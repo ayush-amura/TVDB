@@ -1,29 +1,23 @@
 
 class ActorsController < ApplicationController
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
-
-  # GET /actors
-  # GET /actors.json
+   
   def index
     @actors = Actor.all
   end
 
-  # GET /actors/1
-  # GET /actors/1.json
   def show
   end
 
-  # GET /actors/new
+  
+
   def new
     @actor = Actor.new
   end
 
-  # GET /actors/1/edit
   def edit
   end
 
-  # POST /actors
-  # POST /actors.json
   def create
     @actor = Actor.new(actor_params)
 
@@ -36,8 +30,6 @@ class ActorsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /actors/1
-  # PATCH/PUT /actors/1.json
   def update
     respond_to do |format|
       if @actor.update(actor_params)
@@ -48,8 +40,6 @@ class ActorsController < ApplicationController
     end
   end
 
-  # DELETE /actors/1
-  # DELETE /actors/1.json
   def destroy
     @actor.destroy
     respond_to do |format|
