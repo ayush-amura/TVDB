@@ -30,15 +30,15 @@ class ActorsController < ApplicationController
     end
   end
 
-  def update
-    respond_to do |format|
-      if @actor.update(actor_params)
-        format.html { redirect_to @actor, notice: 'Actor was successfully updated.' }
-      else
-        format.html { render :edit }
-        end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @actor.update(actor_params)
+  #       format.html { redirect_to @actor, notice: 'Actor was successfully updated.' }
+  #     else
+  #       format.html { render :edit }
+  #       end
+  #   end
+  # end
 
   def destroy
     @actor.destroy

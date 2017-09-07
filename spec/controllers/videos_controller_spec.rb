@@ -66,6 +66,13 @@
     end
   end
 
+  describe '#new' do
+    it 'Creates an instance of Video ' do
+        @video = Video.new
+        expect(@video).to be_an_instance_of Video
+    end
+  end
+
  #  #  describe '#edit' do 
  #  #   subject { patch :update, params:{ venue: { name: 'Foo', age: 20,rating: 9 }, id: 7 } }
  #  #   it 'redirects to actors_url' do

@@ -45,6 +45,15 @@
     end
   end
 
+
+  describe '#new' do
+    subject { post :new }
+    it 'redirects to actors_url' do
+      expect(subject).to render_template(:new)
+    end
+  end
+
+
   describe '#invalid create' do
     subject { post :create,params: { actor: { name: 'F' ,rating:8 } } }
     it 'doesn\'t redirects to actors_url' do
@@ -66,12 +75,37 @@
     end
   end
 
-  #  describe '#edit' do 
-  #   subject { patch :update, params:{ venue: { name: 'Foo', age: 20,rating: 9 }, id: 7 } }
+  describe '#new' do
+    it 'Creates an instance of Actor ' do
+        @actor = Actor.new
+        expect(@actor).to be_an_instance_of Actor
+    end
+  end
+
+#   describe '#edit' do
+#     params = { actor: { name: 'F' ,age:22,rating:8 } }, id: 7 }
+#     subject { patch :update, params: params }
+
+#     it 'redirects to actors_url' do
+#       expect(subject).to redirect_to action: :index
+#     end
+#   end
+
+#   describe '#invalid edit' do
+#     params = {actor: { name: 'Foo' },id: 7}
+#     subject { patch :update, params: params }
+
+#     it 'redirects to venues_url' do
+#       expect(subject).to render_template(:edit)
+#     end
+#   end
+
+
+  # describe '#edit' do
+  #   subject { patch :update, params: {actor: { name: 'F' , age: 20,rating:8 } } }
   #   it 'redirects to actors_url' do
-  #     expect(subject).to redirect_to actors_path
+  #     expect(subject).to redirect_to edit_actor_path
   #   end
   # end
-
 
  end

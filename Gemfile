@@ -7,6 +7,9 @@ end
 
 gem'rails-controller-testing'
 
+gem 'simplecov', :require => false, :group => :test
+
+
 gem 'factory_girl'
 
 gem 'devise'

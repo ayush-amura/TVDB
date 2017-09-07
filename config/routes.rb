@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'welcome/movie_index'
   get 'welcome/tvshow_index'
   get 'videos/select'
-  
+  get 'videos/show_actors'  
   # match ':controller/:action/:id', via: [:get, :post]
   
 
