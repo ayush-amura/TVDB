@@ -1,0 +1,13 @@
+<h1>Welcome to tetedb</h1>
+
+
+<%= link_to 'Movie', welcome_movie_index_path %>
+<%= link_to 'Tvshow', welcome_tvshow_index_path %>
+<%=link_to 'Actors', actors_path%>
+
+<%= button_to "Sign-out", destroy_user_session_path, :method => "delete" %>
+
+
+<% if user_signed_in? %>
+  <div>Signed in as :  <%= current_user.email %></div>
+<% end %>
