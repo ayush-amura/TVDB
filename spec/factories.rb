@@ -11,5 +11,11 @@ FactoryGirl.define do
   end
 
   
+  factory :actor do
+    name 'a'
+    age 22
+    rating 9
+    false
+  end
 
 end
