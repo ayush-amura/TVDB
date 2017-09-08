@@ -4,28 +4,29 @@ class User
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  
+  field :contact_no, type: Integer       
+  field :name, type: String
+  field :age, type: Integer
+
+
 
   validates :name, presence: true
   validates :age, presence: true
   validates :contact_no, presence: true
-  validates :type, presence: true
+  # validates :type, presence: true
 
-
-
- #  has_and_belongs_to_many :tvshows,->(object){
- #                            where('type = ? ', 'Video::Tvshow')
- #                          },
- #                          class_name: 'Video'
   
-	# has_and_belongs_to_many :movies,->(object){
- #                            where('type = ? ', 'Video::Movie')
- #                          },
- #                          class_name: 'Video'
+
+
+
+ has_and_belongs_to_many :tvshows,class_name: 'Video'
+  
+ has_and_belongs_to_many :movies,class_name: 'Video'
 	
- #  has_and_belongs_to_many :actors
+ has_and_belongs_to_many :actors
   
-  # has_many :videos
-   # include Mongoid::Document
+  # include Mongoid::Document
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   # devise :database_authenticatable, :registerable,
@@ -44,12 +45,6 @@ class User
   field :last_sign_in_at,    type: Time
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
-  
-  field :name, type: String
-  field :age,type: Integer
-  field :contact_no,type: Integer
-  field :type,type: String
-      # t.timestamps
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time
