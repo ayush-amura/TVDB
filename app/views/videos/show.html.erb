@@ -33,8 +33,10 @@
 
 <p>
   <strong>Cast:</strong>
-  <%=link_to 'Actors', actors_path %>
-      
+  <!-- <%=link_to 'Actors', actors_path %> -->
+ <%= @video.actors.each do |a| %>
+  <%= a.name %>
+  <% end %>    
 </p>
 
 <%= link_to 'Back', videos_path %>

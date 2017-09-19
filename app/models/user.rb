@@ -8,7 +8,7 @@ class User
   field :contact_no, type: Integer       
   field :name, type: String
   field :age, type: Integer
-
+  field :type, type: String
 
 
   validates :name, presence: true
