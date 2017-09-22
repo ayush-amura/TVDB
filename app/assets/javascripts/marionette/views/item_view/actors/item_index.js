@@ -1,7 +1,7 @@
 actorIndex = Marionette.ItemView.extend({
 	
  	template: JST['item_actor_index'],
- 
+  
   serializeData: function() {
   	return {
   		'a' : this.model.attributes

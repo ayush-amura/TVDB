@@ -1,10 +1,3 @@
-ActorsCollectionView = Marionette.CollectionView.extend({
-        childView: actorIndex
-   //      function(){
-   //      	console.log('actorscollectionview')
-   //      	return actorIndex;
-			// }
-});
 var MyControllerActor = Marionette.Controller.extend({
   index: function() 
   {
@@ -13,7 +6,7 @@ var MyControllerActor = Marionette.Controller.extend({
 	actors.fetch().done(function() 
     	{
     		// debugger;
-			var actor_view = new ActorsCollectionView({collection: actors});
+			var actor_view = new actorCompositeIndex({collection: actors});
 			$('body').html(actor_view.render().$el);
 		}
 	)
@@ -33,4 +26,3 @@ var MyControllerActor = Marionette.Controller.extend({
 		  // delete:function(){console.log('In Video delete Method')}
 });
 //==============================================================================
-
