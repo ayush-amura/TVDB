@@ -46743,3 +46743,3237 @@ MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00076837s
 Completed 200 OK in 70ms (Views: 69.6ms)
 
 
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 16:53:44 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00059345s
+  Rendered videos/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 236ms (Views: 235.2ms)
+
+
+Started GET "/videos/59b920d1d838e40c6075a1c0" for 127.0.0.1 at 2017-09-19 16:53:46 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59b920d1d838e40c6075a1c0"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59b920d1d838e40c6075a1c0')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000477718s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59b920d1d838e40c6075a1c0')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000508003s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59bf44c2d838e4382250f781'), BSON::ObjectId('59bf44ddd838e4382250f782')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007436179999999999s
+  Rendered videos/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 45ms (Views: 41.6ms)
+
+
+Started GET "/videos/59b920d1d838e40c6075a1c0" for 127.0.0.1 at 2017-09-19 16:54:49 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59b920d1d838e40c6075a1c0"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59b920d1d838e40c6075a1c0')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00065208s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59b920d1d838e40c6075a1c0')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000559037s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59bf44c2d838e4382250f781'), BSON::ObjectId('59bf44ddd838e4382250f782')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001390947s
+  Rendered videos/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 50ms (Views: 43.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-19 16:54:53 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000454434s
+  Rendered actors/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 57ms (Views: 56.5ms)
+
+
+Started GET "/videos/59b920d1d838e40c6075a1c0" for 127.0.0.1 at 2017-09-19 16:55:26 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59b920d1d838e40c6075a1c0"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59b920d1d838e40c6075a1c0')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000535839s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59b920d1d838e40c6075a1c0')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000508801s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59bf44c2d838e4382250f781'), BSON::ObjectId('59bf44ddd838e4382250f782')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000639656s
+  Rendered videos/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 52ms (Views: 47.1ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 17:01:42 +0530
+  
+SyntaxError (/home/amura/sites/teledb/app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-09-19 17:01:52 +0530
+Processing by WelcomeController#index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00062403s
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 66ms (Views: 40.7ms)
+
+
+Started GET "/welcome/movie_index" for 127.0.0.1 at 2017-09-19 17:01:55 +0530
+Processing by WelcomeController#movie_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000737171s
+  Rendering welcome/movie.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::Movie"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008192s
+  Rendered welcome/movie.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 51ms (Views: 38.4ms)
+
+
+Started GET "/welcome/tvshow_index" for 127.0.0.1 at 2017-09-19 17:01:58 +0530
+Processing by WelcomeController#tvshow_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00050084s
+  Rendering welcome/tvshow.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::TvShow"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000487942s
+  Rendered welcome/tvshow.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 52ms (Views: 48.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-19 17:02:02 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00060175s
+  Rendered actors/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 52ms (Views: 33.9ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-19 17:02:04 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000457359s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000522117s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00061624s
+  Rendered actors/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 40.4ms)
+
+
+Started GET "/actors/59bf44ddd838e4382250f782" for 127.0.0.1 at 2017-09-19 17:02:10 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59bf44ddd838e4382250f782"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59bf44ddd838e4382250f782')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0010167940000000001s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59bf44ddd838e4382250f782')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00045459200000000003s
+  Rendering actors/show.html.erb within layouts/application
+  Rendered actors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 44ms (Views: 39.0ms)
+
+
+Started GET "/welcome/movie_index" for 127.0.0.1 at 2017-09-19 17:02:16 +0530
+Processing by WelcomeController#movie_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00062869s
+  Rendering welcome/movie.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::Movie"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000425626s
+  Rendered welcome/movie.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 49ms (Views: 46.5ms)
+
+
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-19 17:02:17 +0530
+  
+SyntaxError (/home/amura/sites/teledb/app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-19 17:02:40 +0530
+  
+SyntaxError (/home/amura/sites/teledb/app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-19 17:02:46 +0530
+  
+SyntaxError (/home/amura/sites/teledb/app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/videos_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-19 17:03:07 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59bb7b2cd838e40e9c35e48a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000586244s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000444902s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920f0d838e40c6075a1c1')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000529552s
+  Rendered videos/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 60ms (Views: 45.9ms)
+
+
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-19 17:03:29 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59bb7b2cd838e40e9c35e48a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000912035s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000537913s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920f0d838e40c6075a1c1')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0015583440000000001s
+  Rendered videos/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 50ms (Views: 44.3ms)
+
+
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-19 18:23:01 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59bb7b2cd838e40e9c35e48a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000772958s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000599981s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920f0d838e40c6075a1c1')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000849918s
+  Rendered videos/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 215ms (Views: 210.2ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 18:23:05 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006193349999999999s
+  Rendered videos/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 46ms (Views: 45.0ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 19:06:21 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008043200000000001s
+  Rendered videos/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 76ms
+
+
+  
+ActionView::Template::Error (require_directory argument must be a relative path):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1289252527927915007_69878392006340'
+app/controllers/videos_controller.rb:9:in `block (2 levels) in index'
+app/controllers/videos_controller.rb:7:in `index'
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 19:06:49 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000677415s
+  Rendered videos/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 41ms
+
+
+  
+ActionView::Template::Error (require_directory argument must be a relative path):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1289252527927915007_69878350107900'
+app/controllers/videos_controller.rb:9:in `block (2 levels) in index'
+app/controllers/videos_controller.rb:7:in `index'
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 19:07:10 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000601379s
+  Rendered videos/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 34ms
+
+
+  
+ActionView::Template::Error (require_directory argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:20
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1289252527927915007_69878347684600'
+app/controllers/videos_controller.rb:9:in `block (2 levels) in index'
+app/controllers/videos_controller.rb:7:in `index'
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 19:08:04 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000699771s
+  Rendered videos/index.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 36ms
+
+
+  
+ActionView::Template::Error (require_directory argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:21
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1289252527927915007_69878346270220'
+app/controllers/videos_controller.rb:9:in `block (2 levels) in index'
+app/controllers/videos_controller.rb:7:in `index'
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 19:11:11 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000691403s
+  Rendered videos/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 292ms (Views: 290.9ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2017-09-19 19:11:14 +0530
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (8.2ms)
+  Rendered videos/new.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 78ms (Views: 68.7ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-19 19:52:51 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000974426s
+  Rendered videos/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 55ms (Views: 54.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 19:52:55 +0530
+Processing by WelcomeController#index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001231765s
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 39.7ms)
+
+
+Started GET "/welcome/movie_index" for 127.0.0.1 at 2017-09-19 19:52:57 +0530
+Processing by WelcomeController#movie_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000661166s
+  Rendering welcome/movie.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::Movie"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007700070000000001s
+  Rendered welcome/movie.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 50ms (Views: 47.0ms)
+
+
+Started GET "/welcome/tvshow_index" for 127.0.0.1 at 2017-09-19 19:56:44 +0530
+Processing by WelcomeController#tvshow_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00043990299999999995s
+  Rendering welcome/tvshow.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::TvShow"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000406565s
+  Rendered welcome/tvshow.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 43ms (Views: 41.7ms)
+
+
+Started GET "/welcome/movie_index" for 127.0.0.1 at 2017-09-19 19:56:47 +0530
+Processing by WelcomeController#movie_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001170054s
+  Rendering welcome/movie.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::Movie"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006224659999999999s
+  Rendered welcome/movie.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 52ms (Views: 47.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-19 19:56:49 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000641231s
+  Rendered actors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 51ms (Views: 37.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-19 19:56:54 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GyhFwNDqKCntp0N7/geHrPF42VIFVIyCLag/GV4Z+flhiNjK2DXQzNr5Q6q/Je1cQiHicmo+PfDMz9tZcWt6/A=="}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000445741s
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 19:56:54 +0530
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 19:56:54 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 68ms (Views: 66.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 20:11:11 +0530
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 19ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 20:11:11 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 616ms (Views: 613.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 20:12:10 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 72ms (Views: 70.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 20:13:15 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 266ms (Views: 250.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 20:13:18 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 60ms (Views: 57.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 20:14:00 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 367ms (Views: 351.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-19 20:15:31 +0530
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 27ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 20:15:31 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 305ms (Views: 303.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-19 20:20:42 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 1011ms (Views: 995.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-20 10:12:11 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 75ms (Views: 73.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-20 10:27:34 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 72ms (Views: 70.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:13:56 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.007496064s
+  Rendered actors/index.html.erb within layouts/application (301.9ms)
+Completed 200 OK in 621ms (Views: 606.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:15:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007994689999999999s
+  Rendered actors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 66ms (Views: 65.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:20:37 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000570608s
+  Rendered actors/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 201ms (Views: 200.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:23:02 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001094771s
+  Rendered actors/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 53ms (Views: 51.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:33:03 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005732000000000001s
+  Rendered actors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 175ms (Views: 173.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:35:39 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005200430000000001s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 187ms (Views: 185.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:38:28 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0032448s
+  Rendered actors/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 207ms (Views: 206.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:39:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000704341s
+  Rendered actors/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 203ms (Views: 202.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:39:24 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001244131s
+  Rendered actors/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 56ms (Views: 55.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:47:27 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000563117s
+  Rendered actors/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 194ms (Views: 193.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:47:36 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000495655s
+  Rendered actors/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 178ms (Views: 177.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:51:43 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000615816s
+  Rendered actors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 219ms (Views: 218.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:52:03 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000549426s
+  Rendered actors/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 197ms (Views: 196.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 12:52:13 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000494155s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 194ms (Views: 193.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 13:28:13 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000515108s
+  Rendered actors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 69ms (Views: 68.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 13:30:18 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000502006s
+  Rendered actors/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 195ms (Views: 194.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 14:45:55 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00055693s
+  Rendered actors/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 62ms (Views: 61.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 14:46:27 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00045803600000000004s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 189ms (Views: 187.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 14:49:57 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000843294s
+  Rendered actors/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 53ms (Views: 52.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 15:15:57 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.002171111s
+  Rendered actors/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 181ms (Views: 180.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 15:16:11 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005171689999999999s
+  Rendered actors/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 56ms (Views: 55.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 15:35:26 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000730283s
+  Rendered actors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 187ms (Views: 186.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 15:35:30 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005582839999999999s
+  Rendered actors/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 57ms (Views: 55.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 15:36:02 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001228227s
+  Rendered actors/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 61ms (Views: 60.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 15:55:46 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000483864s
+  Rendered actors/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 175ms (Views: 174.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:14:04 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00085819s
+  Rendered actors/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 198ms (Views: 197.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:14:28 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000548082s
+  Rendered actors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 199ms (Views: 197.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:15:48 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000534505s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 208ms (Views: 207.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:17:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00101811s
+  Rendered actors/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 182ms (Views: 181.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:22:16 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000681993s
+  Rendered actors/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 210ms (Views: 209.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:31:52 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001621134s
+  Rendered actors/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 202ms (Views: 201.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:33:01 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000524404s
+  Rendered actors/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 204ms (Views: 202.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:33:44 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000448451s
+  Rendered actors/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 199ms (Views: 195.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:36:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005967079999999999s
+  Rendered actors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 190ms (Views: 188.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:36:16 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0004949350000000001s
+Completed 200 OK in 3ms (Views: 2.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:36:51 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000776945s
+  Rendered actors/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 194ms (Views: 193.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:36:51 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000670866s
+Completed 200 OK in 5ms (Views: 3.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:37:55 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00051372s
+  Rendered actors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 188ms (Views: 186.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 16:37:55 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001706007s
+Completed 200 OK in 5ms (Views: 4.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:01 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000529032s
+  Rendered actors/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 193ms (Views: 192.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:01 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000598117s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:23 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00062086s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 214ms (Views: 213.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:24 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000615831s
+Completed 200 OK in 5ms (Views: 4.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:39 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0014917490000000001s
+  Rendered actors/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 235ms (Views: 234.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:39 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006856729999999999s
+Completed 200 OK in 4ms (Views: 3.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:45 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000454009s
+  Rendered actors/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 58ms (Views: 57.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:04:45 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001501323s
+Completed 200 OK in 5ms (Views: 4.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:05:05 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000540077s
+  Rendered actors/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 70ms (Views: 69.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:05:05 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000631138s
+Completed 200 OK in 4ms (Views: 3.2ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-20 17:10:49 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (90.1ms)
+  Rendered actors/new.html.erb within layouts/application (91.6ms)
+Completed 200 OK in 360ms (Views: 313.5ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-20 17:11:53 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (6.6ms)
+  Rendered actors/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 212ms (Views: 210.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:11:53 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00078786s
+Completed 200 OK in 7ms (Views: 5.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:16:03 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0013497379999999998s
+  Rendered actors/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 198ms (Views: 197.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 17:16:04 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000569798s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors/show" for 127.0.0.1 at 2017-09-20 18:12:01 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"show"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"show"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.011034855s
+Completed 404 Not Found in 14ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) show.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): show ... (1 total) and the following ids were not found: show.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  
+app/controllers/actors_controller.rb:61:in `set_actor'
+Started GET "/actors/show" for 127.0.0.1 at 2017-09-20 18:12:05 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"show"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"show"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000697928s
+Completed 404 Not Found in 3ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) show.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): show ... (1 total) and the following ids were not found: show.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  
+app/controllers/actors_controller.rb:61:in `set_actor'
+Started GET "/actors/edit" for 127.0.0.1 at 2017-09-20 18:12:10 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"edit"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>"edit"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005743219999999999s
+Completed 404 Not Found in 3ms
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Actor with id(s) edit.
+summary:
+  When calling Actor.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): edit ... (1 total) and the following ids were not found: edit.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  
+app/controllers/actors_controller.rb:61:in `set_actor'
+Started GET "/actors/" for 127.0.0.1 at 2017-09-20 18:12:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000715369s
+  Rendered actors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 432ms (Views: 431.5ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-20 18:12:20 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000734584s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00070351s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.028328185999999998s
+  Rendered actors/show.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 101ms (Views: 95.0ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-20 18:12:25 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000549848s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000497022s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006224440000000001s
+  Rendered actors/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 78ms (Views: 73.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:12:25 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000638991s
+Completed 200 OK in 4ms (Views: 2.8ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1/edit" for 127.0.0.1 at 2017-09-20 18:12:33 +0530
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00045797s
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/_form.html.erb (5.3ms)
+  Rendered actors/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 116ms (Views: 58.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:12:33 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000507663s
+Completed 200 OK in 2ms (Views: 1.8ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1/delete" for 127.0.0.1 at 2017-09-20 18:12:47 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/actors/59b920f0d838e40c6075a1c1/delete"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-20 18:12:54 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001300523s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0014458289999999998s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000571643s
+  Rendered actors/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 76ms (Views: 69.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:12:54 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000674474s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-20 18:12:59 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000507317s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000551257s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005349689999999999s
+  Rendered actors/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 75ms (Views: 68.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:13:00 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000599138s
+Completed 200 OK in 3ms (Views: 2.3ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-20 18:13:05 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000450584s
+  Rendered actors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 75ms (Views: 74.6ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-20 18:13:22 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000495592s
+  Rendered actors/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 295ms (Views: 293.8ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-20 18:13:25 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000752933s
+  Rendered actors/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 68ms (Views: 66.9ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1/edit" for 127.0.0.1 at 2017-09-20 18:13:32 +0530
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000555836s
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/_form.html.erb (5.7ms)
+  Rendered actors/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 79ms (Views: 76.4ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1/edit" for 127.0.0.1 at 2017-09-20 18:13:35 +0530
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000515802s
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/_form.html.erb (8.6ms)
+  Rendered actors/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 65ms (Views: 62.4ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-20 18:13:38 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000501445s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000513719s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000865239s
+  Rendered actors/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 68ms (Views: 63.8ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-20 18:13:42 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000523749s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006456900000000001s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000625623s
+  Rendered actors/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 68ms (Views: 63.2ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-20 18:14:12 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000705888s
+  Rendered actors/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 246ms (Views: 244.8ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-20 18:14:17 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000400314s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000457299s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000634703s
+  Rendered actors/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 60ms (Views: 56.2ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-20 18:16:52 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005269890000000001s
+  Rendered actors/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 238ms (Views: 237.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:16:58 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006233650000000001s
+  Rendered actors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 63ms (Views: 62.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:16:58 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000574566s
+Completed 200 OK in 3ms (Views: 2.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:17:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000522037s
+  Rendered actors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 192ms (Views: 191.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:17:15 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001167465s
+Completed 200 OK in 7ms (Views: 6.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:51:19 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001021707s
+  Rendered actors/index.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 208ms (Views: 207.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:51:20 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000591314s
+Completed 200 OK in 5ms (Views: 3.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:52:36 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000710813s
+  Rendered actors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 222ms (Views: 221.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:52:36 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006838290000000001s
+Completed 200 OK in 7ms (Views: 6.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:53:12 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000591667s
+  Rendered actors/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 237ms (Views: 236.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:53:13 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000690862s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:53:23 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000559255s
+  Rendered actors/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 202ms (Views: 200.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:53:23 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000632264s
+Completed 200 OK in 3ms (Views: 2.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:53:45 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000559466s
+  Rendered actors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 200ms (Views: 199.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:53:46 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000655125s
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:56:38 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000706897s
+  Rendered actors/index.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 220ms (Views: 219.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:56:39 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000630271s
+Completed 200 OK in 3ms (Views: 2.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:57:13 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000573411s
+  Rendered actors/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 215ms (Views: 214.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:57:13 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000603203s
+Completed 200 OK in 3ms (Views: 2.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:58:21 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000584847s
+  Rendered actors/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 194ms (Views: 193.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:58:22 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00061126s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:59:05 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000501465s
+  Rendered actors/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 241ms (Views: 239.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:59:05 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000612124s
+Completed 200 OK in 3ms (Views: 2.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:59:40 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001514582s
+  Rendered actors/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 241ms (Views: 240.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 18:59:41 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000556153s
+Completed 200 OK in 3ms (Views: 2.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:00:16 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000505646s
+  Rendered actors/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 264ms (Views: 263.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:00:16 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000766868s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:00:58 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00059751s
+  Rendered actors/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 195ms (Views: 194.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:00:58 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000818639s
+Completed 200 OK in 8ms (Views: 6.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:02:13 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000779801s
+  Rendered actors/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 214ms (Views: 213.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:02:13 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000577957s
+Completed 200 OK in 4ms (Views: 2.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:02:28 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000547968s
+  Rendered actors/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 212ms (Views: 211.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:02:28 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000724914s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:02:39 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00071724s
+  Rendered actors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 75ms (Views: 74.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-20 19:02:40 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000575933s
+Completed 200 OK in 3ms (Views: 2.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:38:16 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007205740000000001s
+  Rendered actors/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 71ms (Views: 70.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:38:16 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000690534s
+Completed 200 OK in 4ms (Views: 2.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:39:55 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000684113s
+  Rendered actors/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 215ms (Views: 214.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:39:55 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000675756s
+Completed 200 OK in 4ms (Views: 2.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:40:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000524761s
+  Rendered actors/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 196ms (Views: 195.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:40:15 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000616121s
+Completed 200 OK in 3ms (Views: 2.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:40:40 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000525739s
+  Rendered actors/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 225ms (Views: 224.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:40:40 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000706891s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:44:14 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006393670000000001s
+  Rendered actors/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 280ms (Views: 279.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:44:14 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001722859s
+Completed 200 OK in 9ms (Views: 7.4ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 09:49:01 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (4.8ms)
+  Rendered actors/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 254ms (Views: 252.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:49:02 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000673218s
+Completed 200 OK in 6ms (Views: 4.6ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 09:52:01 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (4.3ms)
+  Rendered actors/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 247ms (Views: 246.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:52:01 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0012031890000000001s
+Completed 200 OK in 13ms (Views: 11.9ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 09:53:29 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (4.5ms)
+  Rendered actors/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 221ms (Views: 218.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 09:53:29 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000580167s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 10:19:58 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (5.1ms)
+  Rendered actors/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 245ms (Views: 244.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:19:59 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001402344s
+Completed 200 OK in 5ms (Views: 3.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:23:43 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00047502199999999997s
+  Rendered actors/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 205ms (Views: 204.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:23:44 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000783133s
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:24:11 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000455888s
+  Rendered actors/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 229ms (Views: 228.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:24:12 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0009179090000000001s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:31:16 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000563795s
+  Rendered actors/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 206ms (Views: 204.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:31:16 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000522374s
+Completed 200 OK in 5ms (Views: 4.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:31:25 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000734555s
+  Rendered actors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 74ms (Views: 73.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:31:25 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000642077s
+Completed 200 OK in 14ms (Views: 13.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:51:49 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005913880000000001s
+  Rendered actors/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 192ms (Views: 191.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:51:50 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000580425s
+Completed 200 OK in 4ms (Views: 2.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:52:21 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005479310000000001s
+  Rendered actors/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 248ms (Views: 247.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:52:22 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005488320000000001s
+Completed 200 OK in 3ms (Views: 2.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:52:41 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000808904s
+  Rendered actors/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 194ms (Views: 192.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:52:41 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000749266s
+Completed 200 OK in 4ms (Views: 3.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:52:53 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000520172s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 269ms (Views: 268.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:52:53 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000707419s
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:55:02 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001142045s
+  Rendered actors/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 214ms (Views: 213.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:55:03 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005911719999999999s
+Completed 200 OK in 3ms (Views: 2.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:55:22 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000572408s
+  Rendered actors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 203ms (Views: 201.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:55:22 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006169190000000001s
+Completed 200 OK in 3ms (Views: 2.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:55:29 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000666968s
+  Rendered actors/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 196ms (Views: 195.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 10:55:30 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005947600000000001s
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:05:48 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001506494s
+  Rendered actors/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 694ms (Views: 663.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:05:49 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000896827s
+Completed 200 OK in 7ms (Views: 5.7ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-21 11:06:15 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000433255s
+Completed 200 OK in 2ms (Views: 1.8ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-21 11:08:23 +0530
+Processing by VideosController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00088131s
+Completed 200 OK in 17ms (Views: 5.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:09:42 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000564953s
+  Rendered actors/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 226ms (Views: 225.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:09:42 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.002004602s
+Completed 200 OK in 6ms (Views: 4.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:10:23 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00061202s
+  Rendered actors/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 210ms (Views: 208.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:10:23 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000457927s
+Completed 200 OK in 3ms (Views: 2.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:11:32 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000677457s
+  Rendered actors/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 219ms (Views: 217.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:11:33 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000609484s
+Completed 200 OK in 5ms (Views: 4.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:11:43 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00048378s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 201ms (Views: 199.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:11:43 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00060972s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:11:56 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000510681s
+  Rendered actors/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 227ms (Views: 226.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:11:56 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000712355s
+Completed 200 OK in 3ms (Views: 2.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:12:05 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000708502s
+  Rendered actors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 206ms (Views: 205.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:12:05 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.002528994s
+Completed 200 OK in 6ms (Views: 5.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:12:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001480573s
+  Rendered actors/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 236ms (Views: 234.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:12:16 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0009631129999999999s
+Completed 200 OK in 6ms (Views: 5.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:13:22 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007167110000000001s
+  Rendered actors/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 280ms (Views: 279.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:13:23 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000803576s
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:13:30 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0010160079999999999s
+  Rendered actors/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 221ms (Views: 220.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:13:30 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006832870000000001s
+Completed 200 OK in 5ms (Views: 3.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:13:38 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000563274s
+  Rendered actors/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 68ms (Views: 66.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:13:39 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000567654s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:14:12 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000535994s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 191ms (Views: 190.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:14:13 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001145017s
+Completed 200 OK in 6ms (Views: 5.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:15:09 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006727349999999999s
+  Rendered actors/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 214ms (Views: 213.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:15:09 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000768346s
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:15:59 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000599715s
+  Rendered actors/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 214ms (Views: 213.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:15:59 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005933150000000001s
+Completed 200 OK in 3ms (Views: 2.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:16:09 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00057034s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 202ms (Views: 201.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:16:10 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000675318s
+Completed 200 OK in 4ms (Views: 2.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:16:24 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.002976493s
+  Rendered actors/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 72ms (Views: 71.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:16:25 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00064177s
+Completed 200 OK in 4ms (Views: 3.2ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 11:31:31 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (67.9ms)
+  Rendered actors/new.html.erb within layouts/application (69.6ms)
+Completed 200 OK in 121ms (Views: 119.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:31:32 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000703934s
+Completed 200 OK in 3ms (Views: 2.3ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 11:32:57 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (7.7ms)
+  Rendered actors/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 203ms (Views: 201.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:32:57 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005971990000000001s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 11:33:51 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (8.3ms)
+  Rendered actors/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 213ms (Views: 211.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:33:52 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000740646s
+Completed 200 OK in 6ms (Views: 4.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:34:12 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00057644s
+  Rendered actors/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 86ms (Views: 85.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 11:34:12 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000822924s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:52:44 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00044744800000000003s
+  Rendered actors/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 208ms (Views: 207.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:52:45 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000576034s
+Completed 200 OK in 3ms (Views: 2.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:53:26 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001130283s
+  Rendered actors/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 200ms (Views: 199.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:53:27 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000647616s
+Completed 200 OK in 5ms (Views: 4.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:53:44 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00083542s
+  Rendered actors/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 83ms (Views: 82.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:53:44 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000716386s
+Completed 200 OK in 4ms (Views: 3.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:58:53 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000578299s
+  Rendered actors/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 207ms (Views: 206.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 14:58:54 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00077854s
+Completed 200 OK in 6ms (Views: 3.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:09:03 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000651702s
+  Rendered actors/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 194ms (Views: 193.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:09:03 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000806189s
+Completed 200 OK in 4ms (Views: 3.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:17:03 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000514665s
+  Rendered actors/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 265ms (Views: 264.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:17:04 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000768068s
+Completed 200 OK in 5ms (Views: 4.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:22:13 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006185260000000001s
+  Rendered actors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 218ms (Views: 217.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:22:13 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000625828s
+Completed 200 OK in 4ms (Views: 2.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:22:17 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000709337s
+  Rendered actors/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 76ms (Views: 75.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:22:17 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000574978s
+Completed 200 OK in 6ms (Views: 4.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:22:36 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000480029s
+  Rendered actors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 228ms (Views: 227.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:22:37 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001046742s
+Completed 200 OK in 5ms (Views: 4.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:23:11 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007366009999999999s
+  Rendered actors/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 226ms (Views: 225.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:23:11 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00047458600000000004s
+Completed 200 OK in 2ms (Views: 1.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:23:32 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001241105s
+  Rendered actors/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 215ms (Views: 214.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:23:32 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006433049999999999s
+Completed 200 OK in 7ms (Views: 4.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:27:23 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008218819999999999s
+  Rendered actors/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 246ms (Views: 245.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:27:23 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000720293s
+Completed 200 OK in 3ms (Views: 2.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:28:07 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008635159999999999s
+  Rendered actors/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 222ms (Views: 221.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:28:08 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000771814s
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:28:58 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001455219s
+  Rendered actors/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 206ms (Views: 205.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:28:58 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001005215s
+Completed 200 OK in 4ms (Views: 3.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:29:37 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000655141s
+  Rendered actors/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 242ms (Views: 240.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:29:38 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000644645s
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:30:16 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001139442s
+  Rendered actors/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 86ms (Views: 85.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:30:16 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000781392s
+Completed 200 OK in 5ms (Views: 3.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:30:53 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00045751s
+  Rendered actors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 235ms (Views: 234.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:30:54 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000563956s
+Completed 200 OK in 4ms (Views: 2.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:31:35 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007309700000000001s
+  Rendered actors/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 246ms (Views: 245.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:31:36 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000669859s
+Completed 200 OK in 3ms (Views: 2.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:32:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000860781s
+  Rendered actors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 218ms (Views: 217.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:32:15 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000744904s
+Completed 200 OK in 4ms (Views: 3.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:32:53 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005673470000000001s
+  Rendered actors/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 84ms (Views: 83.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:32:53 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000706048s
+Completed 200 OK in 5ms (Views: 3.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:41:35 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008837249999999999s
+  Rendered actors/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 72ms (Views: 71.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:41:35 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000548509s
+Completed 200 OK in 6ms (Views: 3.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:16 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001970351s
+  Rendered actors/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 207ms (Views: 206.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:16 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000739003s
+Completed 200 OK in 3ms (Views: 2.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:21 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000624075s
+  Rendered actors/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 78ms (Views: 77.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:21 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000754198s
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:31 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000540784s
+  Rendered actors/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 224ms (Views: 222.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:32 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000752406s
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:53 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000647217s
+  Rendered actors/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 67ms (Views: 65.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:42:53 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000675592s
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:43:02 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008771790000000001s
+  Rendered actors/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 202ms (Views: 201.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 15:43:02 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000742343s
+Completed 200 OK in 3ms (Views: 2.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:22:40 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007523940000000001s
+  Rendered actors/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 199ms (Views: 198.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:37:08 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000918069s
+  Rendered actors/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 197ms (Views: 196.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:37:14 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001116405s
+  Rendered actors/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 75ms (Views: 74.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:37:16 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000801541s
+  Rendered actors/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 82ms (Views: 80.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:37:21 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000709247s
+  Rendered actors/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 191ms (Views: 190.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:38:20 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000575541s
+  Rendered actors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 211ms (Views: 210.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:40:19 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001391394s
+  Rendered actors/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 92ms (Views: 91.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:40:57 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007225970000000001s
+  Rendered actors/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 231ms (Views: 229.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:45:22 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005429569999999999s
+  Rendered actors/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 72ms (Views: 70.7ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-21 16:46:43 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000679584s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00048388s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.020520260999999998s
+  Rendered actors/show.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 89ms (Views: 85.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:46:46 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006267789999999999s
+  Rendered actors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 61ms (Views: 60.1ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-21 16:46:48 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000557003s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000536333s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006882959999999999s
+  Rendered actors/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 63ms (Views: 58.7ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-21 16:46:49 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001140219s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000698052s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000640666s
+  Rendered actors/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 82ms (Views: 76.2ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-21 16:46:49 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000918437s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.002123415s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0007576849999999999s
+  Rendered actors/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 90ms (Views: 81.5ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-21 16:46:50 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000562682s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005292270000000001s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000616281s
+  Rendered actors/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 78ms (Views: 73.6ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-21 16:46:50 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00041932899999999997s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000620961s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000868414s
+  Rendered actors/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 71ms (Views: 67.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:46:51 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000786733s
+  Rendered actors/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 75ms (Views: 74.5ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 16:46:54 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (6.4ms)
+  Rendered actors/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 61ms (Views: 59.6ms)
+
+
+Started POST "/actors" for 127.0.0.1 at 2017-09-21 16:47:01 +0530
+Processing by ActorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FNQjkQRDBlm7OBP5gKqbkM61SPHSnD+QmQNFzokmHL6u7COdyU+OslZB+V7cIT/wcXvXpLwdC8gH3yZ1XW0Gfw==", "actor"=>{"name"=>"aman", "age"=>"-1", "rating"=>"-1"}, "commit"=>"Create Actor"}
+MONGODB | localhost:27017 | teledb_development.insert | STARTED | {"insert"=>"actors", "documents"=>[{"_id"=>BSON::ObjectId('59c39fadd838e4272e6e4a2a'), "name"=>"aman", "age"=>-1, "rating"=>-1}], "ordered"=>true}
+MONGODB | localhost:27017 | teledb_development.insert | SUCCEEDED | 0.182959951s
+Redirected to http://localhost:3000/actors/59c39fadd838e4272e6e4a2a
+Completed 302 Found in 187ms
+
+
+Started GET "/actors/59c39fadd838e4272e6e4a2a" for 127.0.0.1 at 2017-09-21 16:47:01 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59c39fadd838e4272e6e4a2a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c39fadd838e4272e6e4a2a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000518214s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c39fadd838e4272e6e4a2a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000537777s
+  Rendering actors/show.html.erb within layouts/application
+  Rendered actors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 73ms (Views: 69.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:47:04 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000882958s
+  Rendered actors/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 60ms (Views: 59.0ms)
+
+
+Started DELETE "/actors/59c39fadd838e4272e6e4a2a" for 127.0.0.1 at 2017-09-21 16:47:09 +0530
+Processing by ActorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0b/r63X3mOtUiGBFGQTqqXvVNx8UJz7qj7SfUuBay/dYXHQbIiF4kD6Sr7flmvkQHh07LEMiYkeePwqeB2DNhw==", "id"=>"59c39fadd838e4272e6e4a2a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c39fadd838e4272e6e4a2a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001565467s
+MONGODB | localhost:27017 | teledb_development.delete | STARTED | {"delete"=>"actors", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('59c39fadd838e4272e6e4a2a')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | teledb_development.delete | SUCCEEDED | 0.002219043s
+Redirected to http://localhost:3000/actors
+Completed 302 Found in 9ms
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:47:09 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00094534s
+  Rendered actors/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 67ms (Views: 66.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:47:11 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000697163s
+  Rendered actors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 75ms (Views: 73.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:48:23 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000522088s
+  Rendered actors/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 233ms (Views: 231.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:48:31 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006693s
+  Rendered actors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 199ms (Views: 198.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:49:24 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000533646s
+  Rendered actors/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 88ms (Views: 87.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:52:42 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000677441s
+  Rendered actors/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 266ms (Views: 265.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:52:58 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000533382s
+  Rendered actors/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 213ms (Views: 211.6ms)
+
+
+Started GET "/actor" for 127.0.0.1 at 2017-09-21 16:53:07 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/actor"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:53:10 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006217919999999999s
+  Rendered actors/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 98ms (Views: 96.8ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-21 16:53:15 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.002147423s
+  Rendered videos/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 138ms (Views: 137.2ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-21 16:53:30 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (6.2ms)
+  Rendered actors/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 104ms (Views: 100.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:57:45 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001223798s
+  Rendered actors/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 243ms (Views: 241.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 16:58:36 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000601808s
+  Rendered actors/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 221ms (Views: 220.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:01:02 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00051116s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 208ms (Views: 207.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:01:54 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001346555s
+  Rendered actors/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 88ms (Views: 87.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:03:30 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005696809999999999s
+  Rendered actors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 282ms (Views: 281.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:04:01 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000598986s
+  Rendered actors/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 215ms (Views: 214.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:04:15 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000670284s
+  Rendered actors/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 218ms (Views: 217.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:04:15 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000668418s
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:10:52 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000942402s
+  Rendered actors/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 210ms (Views: 208.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:10:53 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000762553s
+Completed 200 OK in 3ms (Views: 2.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:11:06 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000766823s
+  Rendered actors/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 77ms (Views: 75.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:11:07 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001059796s
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:13:00 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001129319s
+  Rendered actors/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 338ms (Views: 336.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:13:00 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000613348s
+Completed 200 OK in 3ms (Views: 2.1ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:13:17 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000504578s
+  Rendered actors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 203ms (Views: 202.2ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:13:17 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006893769999999999s
+Completed 200 OK in 5ms (Views: 3.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:26:26 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00135888s
+  Rendered actors/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 196ms (Views: 195.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:26:27 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000478817s
+Completed 200 OK in 3ms (Views: 2.0ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:37:13 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0012086199999999999s
+  Rendered actors/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 73ms (Views: 72.6ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 17:37:13 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00048698100000000005s
+Completed 200 OK in 3ms (Views: 1.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 18:40:44 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000717609s
+  Rendered actors/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 212ms (Views: 210.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-21 18:40:44 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008276090000000001s
+Completed 200 OK in 5ms (Views: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 09:53:29 +0530
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 16ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-22 09:53:29 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 1256ms (Views: 1252.9ms)
+
+
+Started GET "/users/actors" for 127.0.0.1 at 2017-09-22 09:53:37 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/actors"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/actors" for 127.0.0.1 at 2017-09-22 09:53:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users/actors"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/actors" for 127.0.0.1 at 2017-09-22 09:53:46 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.038681879s
+  Rendered actors/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 144ms (Views: 114.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-22 09:53:47 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000621688s
+Completed 200 OK in 3ms (Views: 2.5ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-22 10:01:01 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000712326s
+  Rendered actors/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 216ms (Views: 214.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-22 10:01:01 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000703046s
+Completed 200 OK in 5ms (Views: 4.3ms)
+
+

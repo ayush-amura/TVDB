@@ -9,9 +9,9 @@ gem'rails-controller-testing'
 
 gem 'simplecov', :require => false, :group => :test
 
-
+gem 'ejs'
 gem 'factory_girl'
-
+gem 'cancan'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'

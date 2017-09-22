@@ -1,4 +1,4 @@
-var actorController = new MyControllerActor()
+actorController = new MyControllerActor()
 ActorRouter = Mn.AppRouter.extend({
   controller: actorController,
   appRoutes: {
@@ -6,8 +6,7 @@ ActorRouter = Mn.AppRouter.extend({
     'actors/new'        :'new',
     'actors/:id'        :'show',
     'actors/:id/edit'   :'edit'
-     
-     },
+    }
   // onRoute: function(name, path, args) {
   //   console.log('**********************User navigated to ' + path +'*************************');
   // }
