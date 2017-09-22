@@ -3,18 +3,20 @@ class VideosController < ApplicationController
   before_action  :set_video, only: [:show, :edit, :update, :destroy]
   
   def index
-    # params[:id].nil?
-      @video = Video.all
-    # else
-    #   @video = Video.where(id: params[:id])
-    # end
+    @video = Video.all
+    respond_to do |format|
+      format.json { render json: @video }
+      format.html { render 'index' }
+    end 
   end
   
   
-
   def show
-  # @video1 = Video::Movie.last.actors
-  # @videos = Video::Movie.last.actors
+    @video = Video.where(id: params[:id]).first
+    respond_to do |format|
+      format.json { render json: @video }
+      format.html { render 'show' }
+    end
   end
  
 
@@ -60,6 +62,6 @@ class VideosController < ApplicationController
       @video = Video.find(params[:id])
     end
     def video_params
-      params.require(:video).permit(:title, :language, :genre, :year_release, :type, :rating)
+      params.require(:video).permit(:title, :language, :genre, :year_release, :_type, :rating)
     end
 end

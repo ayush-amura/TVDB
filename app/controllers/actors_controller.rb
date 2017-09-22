@@ -2,13 +2,21 @@
 class ActorsController < ApplicationController
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
    
-  def index
+  def index 
     @actors = Actor.all
+    respond_to do |format|
+      format.json { render json: @actors }
+      format.html { render 'index' }
+    end 
   end
 
   def show
+    @actor = Actor.where(id: params[:id]).first
+    respond_to do |format|
+      format.json { render json: @actor }
+      format.html { render 'show' }
+    end
   end
-
   
 
   def new

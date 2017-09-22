@@ -1,0 +1,22 @@
+<h1>Listing Actors</h1>
+<div class="table-responsive">
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Rating</th>
+		</tr>
+		<% _.each(actors, function(a){ %>
+			<tr>
+				<td><%= a.name %></td>
+				<td><%= a.age %></td>
+				<td><%= a.rating %></td>
+				<td id="show">Show</td>
+				<td id="delete">Delete</td>
+				<td id="edit">Edit</td>
+				
+			</tr>
+		<% }) %>
+
+	</table>
+</div>
