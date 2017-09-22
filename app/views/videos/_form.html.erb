@@ -1,0 +1,52 @@
+
+<%= form_for(video) do |form| %>
+ 
+  <% if video.errors.any? %>
+    
+    <div id="error_explanation">
+      <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :video_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :language %>
+    <%= form.select :language, options_for_select('English':'English','Hindi':'Hindi') %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genre %>
+    <%= form.select :genre, options_for_select('Action':'Action','Animation':'Animation','Comedy':'Comedy','Documentry':'Documentry','Horror':'Horror','Musical':'Musical','Romance':'Romance' ) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_release %>
+    <%= form.number_field :year_release,in: 1949...2018, id: :video_year_release %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.select :_type, options_for_select({'Movie': 'Video::Movie','Tvhow': 'Video::TvShow'}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating,in: 1...11, id: :video_rating %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
