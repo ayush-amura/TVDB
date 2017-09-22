@@ -1,12 +1,19 @@
-MyControllerActor = Marionette.Controller.extend({
+ActorsCollectionView = Marionette.CollectionView.extend({
+        childView: actorIndex
+   //      function(){
+   //      	console.log('actorscollectionview')
+   //      	return actorIndex;
+			// }
+});
+var MyControllerActor = Marionette.Controller.extend({
   index: function() 
   {
+  	 actors = new Actors();    
   	console.log('In Actor Index function');
-	actors = new Actor();
-    actors.fetch().done(function() 
+	actors.fetch().done(function() 
     	{
-			var actor_view = new actorIndex({model : actors});
-			var actor_view = new actorLayoutIndex({model : actors});
+    		// debugger;
+			var actor_view = new ActorsCollectionView({collection: actors});
 			$('body').html(actor_view.render().$el);
 		}
 	)
@@ -25,5 +32,5 @@ MyControllerActor = Marionette.Controller.extend({
 		  edit:function(){console.log('In Actor Edit Method')},
 		  // delete:function(){console.log('In Video delete Method')}
 });
-
+//==============================================================================
 

@@ -1,5 +1,7 @@
-VenuesCollectionView = Marionette.CollectionView.extend({
-        tagName: 'table',
-        className: 'table-responsive',
-        childView: VenueItemView
+ActorsCollectionView = Marionette.CollectionView.extend({
+        childView: actorIndex
+   //      function(){
+   //      	console.log('actorscollectionview')
+   //      	return actorIndex;
+			// }
 });

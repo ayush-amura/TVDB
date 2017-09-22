@@ -6,9 +6,10 @@ ActorRouter = Mn.AppRouter.extend({
     'actors/new'        :'new',
     'actors/:id'        :'show',
     'actors/:id/edit'   :'edit'
+    },
+    onRoute: function(name, path) {
+        // this route is being called. This works
+        console.log("on route called", name, path);
     }
-  // onRoute: function(name, path, args) {
-  //   console.log('**********************User navigated to ' + path +'*************************');
-  // }
 });
 new ActorRouter()
