@@ -51059,3 +51059,461 @@ MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00123271s
 Completed 200 OK in 5ms (Views: 3.6ms)
 
 
+Started GET "/actors" for 127.0.0.1 at 2017-09-22 16:42:51 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000656945s
+  Rendered actors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 55ms (Views: 54.2ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-22 16:42:51 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00054s
+Completed 200 OK in 4ms (Views: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 19:11:58 +0530
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-22 19:11:58 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 47ms (Views: 46.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-25 13:11:07 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yC9Ko6vvx2fOl1YQQdkI8R2RWXCZQ28VGw6AwOArznRBzNVT/DknHKSNmeK9RxtIeFlVQ85GM7gKhRUMBxHIBA==", "user"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"b@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.16444894699999998s
+Completed 401 Unauthorized in 428ms
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yC9Ko6vvx2fOl1YQQdkI8R2RWXCZQ28VGw6AwOArznRBzNVT/DknHKSNmeK9RxtIeFlVQ85GM7gKhRUMBxHIBA==", "user"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 231ms (Views: 46.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-25 13:11:13 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cSOznM7fAvgZYLR8BPabQSLod27uMAmX4TsQD0ABoDj4wCxsmQnig3N6e474aIj4RyB7Xbk1VTrwsIXDpzumSA==", "user"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"b@gmail.com"}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.002187056s
+MONGODB | localhost:27017 | teledb_development.update | STARTED | {"update"=>"users", "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "u"=>{"$set"=>{"last_sign_in_at"=>2017-09-19 05:06:57 UTC, "current_sign_in_at"=>2017-09-25 07:41:14 UTC, "sign_in_count"=>3}}, "multi"=>false, "upsert"=>false}...
+MONGODB | localhost:27017 | teledb_development.update | SUCCEEDED | 0.036977855999999996s
+Redirected to http://localhost:3000/
+Completed 302 Found in 264ms
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 13:11:14 +0530
+Processing by WelcomeController#index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000587486s
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 46.0ms)
+
+
+Started GET "/welcome/movie_index" for 127.0.0.1 at 2017-09-25 13:11:16 +0530
+Processing by WelcomeController#movie_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000593951s
+  Rendering welcome/movie.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::Movie"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000456533s
+  Rendered welcome/movie.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 84ms (Views: 51.3ms)
+
+
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-25 13:11:19 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59bb7b2cd838e40e9c35e48a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.015800619s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000535393s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920f0d838e40c6075a1c1')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.015918146s
+  Rendered videos/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 82ms (Views: 61.7ms)
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-25 13:11:22 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005663679999999999s
+  Rendered videos/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 81ms (Views: 79.7ms)
+
+
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-25 13:11:24 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59bb7b2cd838e40e9c35e48a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000580368s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000632912s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920f0d838e40c6075a1c1')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000557046s
+  Rendered videos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 92ms (Views: 85.6ms)
+
+
+Started GET "/videos/59bb7b57d838e40e9c35e48b" for 127.0.0.1 at 2017-09-25 13:11:29 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59bb7b57d838e40e9c35e48b"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b57d838e40e9c35e48b')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.008306318s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b57d838e40e9c35e48b')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00046835000000000003s
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 46.1ms)
+
+
+Started DELETE "/videos/59bb7b57d838e40e9c35e48b" for 127.0.0.1 at 2017-09-25 13:11:35 +0530
+Processing by VideosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SIaj36oc2KvC19S9TFX0Tm0oJE1EJz6jAB1kv++X8UhthPTuhg3YLXhqUUJ3N+6QRMitomrJ6lFVxP8BXY0a/Q==", "id"=>"59bb7b57d838e40e9c35e48b"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b57d838e40e9c35e48b')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006085200000000001s
+MONGODB | localhost:27017 | teledb_development.delete | STARTED | {"delete"=>"videos", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('59bb7b57d838e40e9c35e48b')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | teledb_development.delete | SUCCEEDED | 0.001955044s
+Redirected to http://localhost:3000/videos
+Completed 302 Found in 8ms
+
+
+Started GET "/videos" for 127.0.0.1 at 2017-09-25 13:11:35 +0530
+Processing by VideosController#index as HTML
+  Rendering videos/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00089319s
+  Rendered videos/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 77ms (Views: 57.9ms)
+
+
+Started GET "/videos/59bb7b2cd838e40e9c35e48a" for 127.0.0.1 at 2017-09-25 13:11:39 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59bb7b2cd838e40e9c35e48a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000595615s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59bb7b2cd838e40e9c35e48a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000689119s
+  Rendering videos/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920f0d838e40c6075a1c1')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000823506s
+  Rendered videos/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 70ms (Views: 64.6ms)
+
+
+Started GET "/welcome/movie_index" for 127.0.0.1 at 2017-09-25 13:11:40 +0530
+Processing by WelcomeController#movie_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000679791s
+  Rendering welcome/movie.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::Movie"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0008005590000000001s
+  Rendered welcome/movie.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 84ms (Views: 81.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 13:11:42 +0530
+Processing by WelcomeController#index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001038257s
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 72ms (Views: 67.4ms)
+
+
+Started GET "/welcome/tvshow_index" for 127.0.0.1 at 2017-09-25 13:11:43 +0530
+Processing by WelcomeController#tvshow_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000587845s
+  Rendering welcome/tvshow.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::TvShow"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000580481s
+  Rendered welcome/tvshow.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 64ms (Views: 61.2ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2017-09-25 13:11:47 +0530
+Processing by VideosController#new as HTML
+  Rendering videos/new.html.erb within layouts/application
+  Rendered videos/_form.html.erb (21.2ms)
+  Rendered videos/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 79ms (Views: 64.0ms)
+
+
+Started POST "/videos" for 127.0.0.1 at 2017-09-25 13:12:01 +0530
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uK+Sp6WL/l8ibScCREE3fbNFtUK+pBqBCE3lO175/i0ks8JI41R/E5lEHC9Lc0HeCkeyoPr34R2P2jdfQ9CoGQ==", "video"=>{"title"=>"suits", "language"=>"English", "genre"=>"Documentry", "year_release"=>"1970", "_type"=>"Video::TvShow", "rating"=>"9"}, "commit"=>"Create Video"}
+MONGODB | localhost:27017 | teledb_development.insert | STARTED | {"insert"=>"videos", "documents"=>[{"_id"=>BSON::ObjectId('59c8b349d838e40bdaef5998'), "_type"=>"Video::TvShow", "title"=>"suits", "language"=>"English", "genre"=>"Documentry", "year_release"=>1970, "rating"=>9}], "ordered"=>true}
+MONGODB | localhost:27017 | teledb_development.insert | SUCCEEDED | 0.034806705s
+Redirected to http://localhost:3000/videos/59c8b349d838e40bdaef5998
+Completed 302 Found in 42ms
+
+
+Started GET "/videos/59c8b349d838e40bdaef5998" for 127.0.0.1 at 2017-09-25 13:12:01 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59c8b349d838e40bdaef5998"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59c8b349d838e40bdaef5998')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00048061400000000003s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59c8b349d838e40bdaef5998')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000423359s
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 50ms (Views: 47.5ms)
+
+
+Started POST "/videos" for 127.0.0.1 at 2017-09-25 13:12:27 +0530
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cQqVXgfe19RE/i4uBQsIjdpU96ID74sdkZtxQXP4etxUCMJvK8/XUv5Dq9E+aRJT87R+TS0BX+/EQur/weKRaQ==", "video"=>{"title"=>"TMKOC", "language"=>"Hindi", "genre"=>"Horror", "year_release"=>"2002", "_type"=>"Video::TvShow", "rating"=>"1"}, "commit"=>"Create Video"}
+MONGODB | localhost:27017 | teledb_development.insert | STARTED | {"insert"=>"videos", "documents"=>[{"_id"=>BSON::ObjectId('59c8b363d838e40bdaef5999'), "_type"=>"Video::TvShow", "title"=>"TMKOC", "language"=>"Hindi", "genre"=>"Horror", "year_release"=>2002, "rating"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | teledb_development.insert | SUCCEEDED | 0.001539362s
+Redirected to http://localhost:3000/videos/59c8b363d838e40bdaef5999
+Completed 302 Found in 6ms
+
+
+Started GET "/videos/59c8b363d838e40bdaef5999" for 127.0.0.1 at 2017-09-25 13:12:27 +0530
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"59c8b363d838e40bdaef5999"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59c8b363d838e40bdaef5999')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000472459s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_id"=>BSON::ObjectId('59c8b363d838e40bdaef5999')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000546789s
+  Rendering videos/show.html.erb within layouts/application
+  Rendered videos/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 60ms (Views: 56.3ms)
+
+
+Started GET "/welcome/tvshow_index" for 127.0.0.1 at 2017-09-25 13:12:29 +0530
+Processing by WelcomeController#tvshow_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000675024s
+  Rendering welcome/tvshow.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::TvShow"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000749337s
+  Rendered welcome/tvshow.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 74ms (Views: 71.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 13:12:32 +0530
+Processing by WelcomeController#index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000580779s
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 62ms (Views: 58.7ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-25 13:12:33 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000638068s
+  Rendered actors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 59.4ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-25 13:12:35 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (4.3ms)
+  Rendered actors/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 72ms (Views: 58.3ms)
+
+
+Started POST "/actors" for 127.0.0.1 at 2017-09-25 13:12:46 +0530
+Processing by ActorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pfnbpRXmdEKKH0Pmry7XM689IiAQ5YLh+XosUiYbnt50mO0QEBgBX6ZMpBmtAq42XPT4cvKteQWC69+sEK/P4A==", "actor"=>{"name"=>"jethalal", "age"=>"50", "rating"=>""}, "commit"=>"Create Actor"}
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (5.4ms)
+  Rendered actors/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 66ms (Views: 62.4ms)
+
+
+Started GET "/actors/" for 127.0.0.1 at 2017-09-25 13:12:46 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0006577929999999999s
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-25 13:12:49 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000593318s
+Completed 200 OK in 3ms (Views: 2.6ms)
+
+
+Started POST "/actors" for 127.0.0.1 at 2017-09-25 13:12:59 +0530
+Processing by ActorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2LNY6UEShv87+xxdThdVi3ItsqSPMb57ASNL+F4jqfL9sQ/YbQOGeYFGmaJ1dU9VW807S6HfaolU+tBG7DlCRw==", "actor"=>{"name"=>"jethalal", "age"=>"50", "rating"=>"16"}, "commit"=>"Create Actor"}
+MONGODB | localhost:27017 | teledb_development.insert | STARTED | {"insert"=>"actors", "documents"=>[{"_id"=>BSON::ObjectId('59c8b383d838e40bdaef599a'), "name"=>"jethalal", "age"=>50, "rating"=>16}], "ordered"=>true}
+MONGODB | localhost:27017 | teledb_development.insert | SUCCEEDED | 0.000584576s
+Redirected to http://localhost:3000/actors/59c8b383d838e40bdaef599a
+Completed 302 Found in 6ms
+
+
+Started GET "/actors/59c8b383d838e40bdaef599a" for 127.0.0.1 at 2017-09-25 13:12:59 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59c8b383d838e40bdaef599a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c8b383d838e40bdaef599a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00055164s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c8b383d838e40bdaef599a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000553993s
+  Rendering actors/show.html.erb within layouts/application
+  Rendered actors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 65ms (Views: 60.4ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-25 13:13:04 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000601651s
+Completed 200 OK in 6ms (Views: 4.9ms)
+
+
+Started GET "/actors/new" for 127.0.0.1 at 2017-09-25 13:13:57 +0530
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/_form.html.erb (7.8ms)
+  Rendered actors/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 75ms (Views: 73.8ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-25 13:13:57 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000668548s
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started GET "/actors" for 127.0.0.1 at 2017-09-25 13:14:04 +0530
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001712648s
+  Rendered actors/index.html.erb within layouts/application (5.9ms)
+Started GET "/actors/" for 127.0.0.1 at 2017-09-25 13:14:04 +0530
+Processing by ActorsController#index as JSON
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000641399s
+Completed 200 OK in 6ms (Views: 4.8ms)
+
+
+Completed 200 OK in 99ms (Views: 97.5ms)
+
+
+Started GET "/actors/59c8b383d838e40bdaef599a" for 127.0.0.1 at 2017-09-25 13:14:06 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59c8b383d838e40bdaef599a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c8b383d838e40bdaef599a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000595858s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c8b383d838e40bdaef599a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001014347s
+  Rendering actors/show.html.erb within layouts/application
+  Rendered actors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 48.5ms)
+
+
+Started GET "/actors/59c8b383d838e40bdaef599a" for 127.0.0.1 at 2017-09-25 13:14:15 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59c8b383d838e40bdaef599a"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c8b383d838e40bdaef599a')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000575273s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59c8b383d838e40bdaef599a')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000580629s
+  Rendering actors/show.html.erb within layouts/application
+  Rendered actors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 96ms (Views: 90.9ms)
+
+
+Started GET "/actors/59b920f0d838e40c6075a1c1" for 127.0.0.1 at 2017-09-25 13:14:19 +0530
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"59b920f0d838e40c6075a1c1"}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0005219809999999999s
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"actors", "filter"=>{"_id"=>BSON::ObjectId('59b920f0d838e40c6075a1c1')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000753311s
+  Rendering actors/show.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"$and"=>[{"_id"=>{"$in"=>[BSON::ObjectId('59b920add838e40c6075a1bf')]}}]}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000657443s
+  Rendered actors/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 64ms (Views: 59.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 13:14:21 +0530
+Processing by WelcomeController#index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.001103938s
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 78ms (Views: 72.0ms)
+
+
+Started GET "/welcome/tvshow_index" for 127.0.0.1 at 2017-09-25 13:14:23 +0530
+Processing by WelcomeController#tvshow_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.0011596940000000002s
+  Rendering welcome/tvshow.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::TvShow"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000708088s
+  Rendered welcome/tvshow.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 58ms (Views: 53.8ms)
+
+
+Started GET "/welcome/movie_index" for 127.0.0.1 at 2017-09-25 13:14:27 +0530
+Processing by WelcomeController#movie_index as HTML
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000926049s
+  Rendering welcome/movie.html.erb within layouts/application
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"videos", "filter"=>{"_type"=>"Video::Movie"}}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.00050115s
+  Rendered welcome/movie.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 60ms (Views: 55.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 13:14:30 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"acuFqUdTCfsTFUO7FHXEszwGVXL72JgESFVFfsJfbg5o07KJrZdt8RctBJ/fxdN9BltDWaAU6MIPLnMuiUZKmA=="}
+MONGODB | localhost:27017 | teledb_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('59bb7b13d838e40e9c35e489')}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | teledb_development.find | SUCCEEDED | 0.000745421s
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 13:14:30 +0530
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 13:14:30 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 54ms (Views: 52.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-25 13:14:32 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 65ms (Views: 63.7ms)
+
+
