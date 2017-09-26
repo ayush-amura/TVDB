@@ -1,0 +1,1 @@
+I"/function(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('  <thead>\n    <tr>\n      <th>Shop Name</th>\n      <th>Created At</th>\n      <th>Updated At</th>\n    </tr>\n  </thead>\n  <!-- want to insert collection children, here -->\n \n');}return __p.join('');}:ET
