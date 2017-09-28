@@ -2,7 +2,7 @@
 class ActorsController < ApplicationController
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
    
-  def index 
+  def index
     @actors = Actor.all
     respond_to do |format|
       format.json { render json: @actors }
@@ -38,15 +38,16 @@ class ActorsController < ApplicationController
     end
   end
 
-  # def update
-  #   respond_to do |format|
-  #     if @actor.update(actor_params)
-  #       format.html { redirect_to @actor, notice: 'Actor was successfully updated.' }
-  #     else
-  #       format.html { render :edit }
-  #       end
-  #   end
-  # end
+  def update
+    respond_to do |format|
+      if @actor.update(actor_params)
+        format.html { redirect_to @actor, notice: 'Actor was successfully updated.' }
+        format.json { render json: @actor }
+      else
+        format.html { render :edit }
+        end
+    end
+  end
 
   def destroy
     @actor.destroy

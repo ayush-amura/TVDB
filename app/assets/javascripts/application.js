@@ -19,9 +19,9 @@
 //= require_tree ./backbone_defaults/models
 //= require_tree ./backbone_defaults/collections
 //= require_tree ../templates
-//= require_tree ./marionette/views/layout_view
-//= require_tree ./marionette/views/item_view
-//= require_tree ./marionette/views/collection_view
+//= require_tree ./marionette/views/layoutView
+//= require_tree ./marionette/views/itemView
+//= require_tree ./marionette/views/collectionView
 //= require_tree ./marionette/controllers
 //= require_tree ./marionette/routes
 

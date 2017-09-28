@@ -1,5 +1,5 @@
 Actor = Backbone.Model.extend({
-  url:  "/actors"
+   urlRoot:  "/actors/"
 });
 
 

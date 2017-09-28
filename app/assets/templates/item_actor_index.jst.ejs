@@ -1,9 +1,9 @@
+
 		<tr>
-				<td><%= a.name %></td>
-				<td><%= a.age %></td>
-				<td><%= a.rating %></td>
-				<!-- <td id="show">Show</td>
-				<td id="delete">Delete</td>
-				<td id="edit">Edit</td> -->
-				
+			<td><%= a.name %></td>
+			<td><%= a.age %></td>
+			<td><%= a.rating %></td>
+			<td class="edit", data-id='<%= a._id %>' >Edit</td>
+			<td class="delete", data-id='<%= a._id %>'>Delete</td>
+			<td class="show", data-id='<%= a._id %>'>Show</td>
 		</tr>

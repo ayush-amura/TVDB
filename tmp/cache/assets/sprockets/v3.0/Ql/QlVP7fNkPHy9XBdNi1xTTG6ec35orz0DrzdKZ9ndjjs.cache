@@ -1,0 +1,1 @@
+I"+function(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('  <thead>\n      <th><h3>Actor Details</h3></th>\n\n\n  </thead>\n  <!-- want to insert collection children, here -->\n  <tbody id="table_body">\n  \t<p>JST</p>\n\n  </tbody>\n');}return __p.join('');}:ET
