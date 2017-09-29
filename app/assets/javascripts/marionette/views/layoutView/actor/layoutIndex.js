@@ -1,14 +1,15 @@
 actorLayoutIndex = Marionette.LayoutView.extend({
-	 template: JST['layout_index'],
+	 template: JST['layout_actor_index'],
 
     regions: {
-      summary: '.summary',
-      report: '.report'
+      search: '.search',
+      table: '.table'
     },
-
-
   onRender: function() {
-    this.showChildView('summary',new ActorsCollectionView( { collection: this.collection } ) );
+    console.log('Layout_index') 
+    this.showChildView('search',new actorSearch({collection: this.collection}));
+    this.showChildView('table',new actorCompositeIndex({collection: this.collection}));
+    // this.showChildView('search',new actorCompositeIndex({collection: this.collection}));
   }
  });
 //==============================================================================

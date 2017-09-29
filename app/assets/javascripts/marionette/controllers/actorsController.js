@@ -6,7 +6,9 @@ var MyControllerActor = Marionette.Controller.extend({
 	actors.fetch().done(function() 
     	{
     		// debugger;
-			var actor_view = new actorCompositeIndex({collection: actors});
+			// var actor_view = new actorCompositeIndex({collection: actors});
+			// $('body').html(actor_view.render().$el);
+			var actor_view = new actorLayoutIndex({collection: actors});
 			$('body').html(actor_view.render().$el);
 		}
 	)

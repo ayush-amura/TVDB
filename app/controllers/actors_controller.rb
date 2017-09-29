@@ -56,6 +56,14 @@ class ActorsController < ApplicationController
       end
   end
 
+  def search
+    param = params[:name]
+    @actors = Actor.where( { name: /^#{param}/ } )
+    respond_to do |format|
+      format.json { render json: @actors }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_actor

@@ -1,4 +1,4 @@
-actorController = new MyControllerActor()
+actorController = new MyControllerActor();
 ActorRouter = Mn.AppRouter.extend({
   controller: actorController,
   appRoutes: {

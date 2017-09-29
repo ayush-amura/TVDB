@@ -7,12 +7,6 @@ actorShow = Marionette.ItemView.extend({
     'click .delete': 'delete_actor'
   },
 
-  serializeData: function() {
-   debugger; 
-  	return {
-  		'a' : this.model.attributes
-  	}
-  },
 
   edit_actor: function(event) {
     var id = $(event.currentTarget).data('id');

@@ -9,13 +9,7 @@ actorIndex = Marionette.ItemView.extend({
     'click .delete': 'delete_actor'
   },
 
-  serializeData: function() {
-    
-  	return {
-  		'a' : this.model.attributes
-  	}
-  },
-
+ 
   show_actor:function(event){
     var id = $(event.currentTarget).data('id');
     Backbone.history.navigate('actors/' + id, {trigger: true} );

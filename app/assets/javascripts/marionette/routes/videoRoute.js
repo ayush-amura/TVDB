@@ -1,12 +1,14 @@
-var myController = new MyControllerVideo()
+videoController = new MyControllerVideo()
 VideoRouter = Mn.AppRouter.extend({
-  controller: myController,
+  controller: videoController,
   appRoutes: {
     'videos'           :'index',
     'videos/new'       :'new',
-    'videos/:id'        :'show',
-     },
-  // onRoute: function(name, path, args) {
-  //   console.log('**********************User navigated to ' + path +'*************************');
-  // }
+    'videos/:id'       :'show',
+    'videos/:id/edit'  :'edit'
+    },
+   onRoute: function(name, path) {
+        console.log("on route called", name, path);
+    }
 });
+

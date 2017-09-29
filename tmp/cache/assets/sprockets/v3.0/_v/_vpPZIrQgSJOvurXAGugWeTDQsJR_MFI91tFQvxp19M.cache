@@ -1,0 +1,1 @@
+I"%function(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<center>\n   <p> \n   <input type="text"  list= \'actors\' id="search_name" placeholder=" search actor " <br>\n   <datalist id="actors"></datalist>\n   </p>\n</center> \n');}return __p.join('');}:ET

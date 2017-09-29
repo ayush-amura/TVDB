@@ -1,0 +1,1 @@
+I"áfunction(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<h1>Search Region</h1>\n<div class="search"></div>\n<h1>Table Region</h1>\n<div class="table"></div>\n');}return __p.join('');}:ET
